@@ -1,0 +1,84 @@
+﻿@charset "utf-8";
+@import url(reset.css);
+
+body {font:12px arial; background:url(../images/bg_line.png) repeat-x left 80px; }
+#wrapper, #foot {width:980px; margin:0 auto;}
+#wrapper {position:relative; left:0; top:0;}
+#wrapper:after { content:""; display:block; clear:both; }
+
+/*popup*/
+#popup {width:444px; height:514px; position:fixed; left:40%; top:20%; border:3px solid #00f; background:#fff; text-align:center; box-shadow:3px 3px 4px #000;  overflow:hidden; z-index:100; /* display:none; */}
+	#popup img {}
+	#popup p {font-size:25px;}
+	#popup .p_button {font-size:20px; padding:30px;}
+	#popup .p_button input {transform:scale(2); margin-right:10px;}
+	#popup .p_button button {font-size:20px; padding-bottom:10px;}
+	#popup .p_button button:hover,.p_button input:hover {cursor:pointer;}
+
+/*header*/
+header {}
+	.logo {float:left;}
+	.util {float:right;}
+		.util li{float:left; padding: 10px 15px;}
+		
+	.search {float:left; padding:15px 30px; position:relative;}
+		.search input {font-size:20px; padding:8px 30px 8px 15px; border-radius:30px;}
+		.search button {font-size:20px; position:absolute; right:40px; top:25px;}
+		.search button:hover {cursor:pointer;}
+	
+	.gnb {clear:both; text-align:center; position:relative; background-color:#f00; z-index:100;}
+		.gnb>li{float:left; background:#eee;}
+		.gnb>li:hover {background:#4e7f81;}
+		.gnb>li:hover ul{display:inline; border-top:1px solid #000;}
+			.gnb li>a{padding:20px 50px;  display:block; font-size:16px; font-weight:bold;}
+				.gnb ul { display:none; position:absolute; left:0; background:#eee; width:980px;}
+				.gnb li ul li {float:left; }
+				.gnb li ul li a{font-size:14px; padding:10px 15px; font-weight:normal;}
+				.gnb li ul li:hover a{border-bottom:2px solid blue; color:blue;}
+
+	.main {clear:both; position:relative; width:980px; height:550px; overflow:hidden;}
+		.mainImg {width:5880px; position:absolute; left:0;}
+		.mainImg li{float:left;}
+		
+		.arrow {position:absolute; width:80px; height:80px; /*text-indent:-99999999999px;*/ bottom:10px; right:100px; border-radius:20px; z-index:1000; background-color:rgba(100,100,100,0.5);}
+		.arrow a {height:80px; float:left; text-indent:-99999999999px; position:absolute; cursor:pointer;}
+			.prev {background:url(../images/arrow.png) no-repeat left top; left:0; width:34px; }
+			.prev:hover {background:url(../images/arrow.png) no-repeat left bottom;}
+			.next {background:url(../images/arrow.png) no-repeat right top; right:0; width:34px; }
+			.next:hover {background:url(../images/arrow.png) no-repeat right bottom;}
+
+			.control {width:50px; height:80px; position:absolute; bottom:10px; right:10px; z-index:100; font-size:50px;  background-color:rgba(100,100,100,0.5); border-radius:20px; font-weight:bold; line-height:80px;}
+				.stop, .start { cursor:pointer; color:#fff ; position:absolute; left:5px; top:0;}
+				.stop {left:12px; }
+				.start {display:none;}
+		
+		
+
+/*section*/
+section {clear:both; margin-top:40px;}
+	.today, .best {position:relative;}
+	.today h1 {font-size:26px;}
+	.today ul, .best ul {float:left; padding:40px 0 100px;}
+	.today ul li, .best ul li {float:left; padding-left:36px;}
+	
+	.today ul li .img, .best ul li .img {margin:0 auto; width:200px; overflow:hidden; margin-bottom:10px;}
+	.today ul li a img, .best ul li a img {max-width:100%; transition: all 0.2s linear;}
+	.today ul li a, .best ul li a {font-size:14px;}
+	.today ul li a:hover img, .best ul li a:hover img{transform : scale(1.2);}
+	
+		.todayBig img {width:760px; height:550px; position:absolute; left:110px; top:0; display:none; cursor:pointer;}
+		.todayBig .close {cursor:pointer;position:absolute; right:120px; top:0; font-size:20px; display:none;}
+		
+	.best {clear:both;}
+		.best .b_img {margin-bottom:40px;}
+			.best h2 {position:absolute; left:50px; top:70px; color:#fff; font-size: 40px; text-shadow:2px 2px 4px purple;}
+	
+		.bestBig img {width:760px; height:550px; position:absolute; left:110px; top:150px; display:none; cursor:pointer;}
+		.bestBig .close {cursor:pointer;position:absolute; right:120px; top:150px; font-size:20px; display:none;}
+	
+
+	
+/*footer*/
+footer {clear:both; background:#eee; margin:30px 0;}
+	#foot {padding:20px 0;}
+	#foot address{background:url(../images/logo2.png) no-repeat left center/200px 150px; padding-left:230px;}
